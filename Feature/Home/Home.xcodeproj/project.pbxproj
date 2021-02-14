@@ -15,6 +15,7 @@
 		D4ADDDF925D9834A00E036D7 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4ADDDF825D9834A00E036D7 /* Core.framework */; };
 		D4ADDDFA25D9834A00E036D7 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4ADDDF825D9834A00E036D7 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D4ADDDFE25D986D500E036D7 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ADDDFD25D986D500E036D7 /* HomeDataSource.swift */; };
+		D4ADDEA925D9A7E700E036D7 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ADDEA825D9A7E700E036D7 /* HomeRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		D4ADDDA825D97D4200E036D7 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4ADDDF825D9834A00E036D7 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4ADDDFD25D986D500E036D7 /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
+		D4ADDEA825D9A7E700E036D7 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 		D48DC7F525D92B8C00D91C0A /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				D4ADDEA725D9A7CA00E036D7 /* Repository */,
 				D4ADDDFC25D986C000E036D7 /* Remote */,
 			);
 			path = Data;
@@ -160,6 +163,14 @@
 				D4ADDDFD25D986D500E036D7 /* HomeDataSource.swift */,
 			);
 			path = Remote;
+			sourceTree = "<group>";
+		};
+		D4ADDEA725D9A7CA00E036D7 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				D4ADDEA825D9A7E700E036D7 /* HomeRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4ADDDFE25D986D500E036D7 /* HomeDataSource.swift in Sources */,
+				D4ADDEA925D9A7E700E036D7 /* HomeRepository.swift in Sources */,
 				D48B1CB725D8F9400013DDBD /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -122,6 +122,7 @@
 		D46A1B9D25D67EAB0069ABCE /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D48DC82D25D9384A00D91C0A /* Domain */,
 				D48DC82325D9375200D91C0A /* Data */,
 				D48DC7A325D9125700D91C0A /* Utils */,
 				D46A1B9E25D67EAB0069ABCE /* Core.h */,
@@ -172,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				D4ADDDEC25D981C600E036D7 /* Remote */,
-				D48DC82D25D9384A00D91C0A /* UseCase */,
 				D48DC82525D9376100D91C0A /* Local */,
 			);
 			path = Data;
@@ -195,12 +195,12 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		D48DC82D25D9384A00D91C0A /* UseCase */ = {
+		D48DC82D25D9384A00D91C0A /* Domain */ = {
 			isa = PBXGroup;
 			children = (
 				D48DC82E25D9385400D91C0A /* Model */,
 			);
-			path = UseCase;
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		D48DC82E25D9385400D91C0A /* Model */ = {

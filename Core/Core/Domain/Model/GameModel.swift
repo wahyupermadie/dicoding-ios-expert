@@ -5,7 +5,7 @@
 //  Created by Wahyu Permadi on 14/02/21.
 //
 
-struct GameModel {
+public struct GameModel {
     var id: Int
     var name: String
     var released: Date? = nil

@@ -9,7 +9,7 @@ import Foundation
 import RealmSwift
 
 extension Array where Element == Game {
-    func mapToModel() -> [GameModel] {
+    public func mapToModel() -> [GameModel] {
         self.map { (game) in
             return GameModel(
                 id: game.gameId ?? 0,
@@ -27,7 +27,7 @@ extension Array where Element == Game {
 }
 
 extension GameResponse {
-    func mapToModel() -> [GameModel] {
+    public func mapToModel() -> [GameModel] {
         self.results.map { (game) in
             return GameModel(
                 id: game.gameId ?? 0,
@@ -45,7 +45,7 @@ extension GameResponse {
 }
 
 extension Results {
-    func toArray<T>(ofType: T.Type) -> [T] {
+    public func toArray<T>(ofType: T.Type) -> [T] {
         var array: [T] = []
         for index in 0 ..< count {
             if let result = self[index] as? T {
@@ -57,14 +57,14 @@ extension Results {
 }
 
 extension Game {
-    func getGenres() -> String {
+    public func getGenres() -> String {
         guard let genres = self.genres else { return ""}
         return genres.map { $0.name ?? "" }.joined(separator: ", ")
     }
 }
 
 extension LocalGameEntity {
-    func convertObjectToModel() -> GameModel {
+    public func convertObjectToModel() -> GameModel {
         return GameModel(
             id: self.id,
             name: self.name,
@@ -81,7 +81,7 @@ extension LocalGameEntity {
 }
 
 extension Array where Element == LocalGameEntity {
-    func mapToModel() -> [GameModel] {
+    public func mapToModel() -> [GameModel] {
         self.map { (game) in
             return GameModel(
                 id: game.id,

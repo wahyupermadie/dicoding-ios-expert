@@ -32,10 +32,10 @@ internal class HomeDataSourceImpl: HomeDataSource {
                     .validate()
                     .responseDecodable(of: GameResponse.self) { response in
                         switch response.result {
-                            case .success(let data):
-                                completion(.success(data))
-                            case .failure(let error):
-                                completion(.failure(error))
+                        case .success(let data):
+                            completion(.success(data))
+                        case .failure(let error):
+                            completion(.failure(error))
                         }
                     }
             }

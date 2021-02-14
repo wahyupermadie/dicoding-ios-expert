@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - Result
-struct Game: Codable {
+public struct Game: Codable {
     let gameId: Int?
     let name: String?
     let released: Date?
@@ -42,7 +42,7 @@ struct Game: Codable {
         self.moviesCount = movieCount
     }
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         moviesCount = try? container.decode(Int.self, forKey: .moviesCount)
         gameId = try? container.decode(Int.self, forKey: .gameId)

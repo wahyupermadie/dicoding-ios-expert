@@ -9,7 +9,7 @@ import Foundation
 import RealmSwift
 import Combine
 
-protocol LocalDataSource {
+public protocol LocalDataSource {
     func getFavorites() -> AnyPublisher<[LocalGameEntity], Error>
     func setFavorite(id: Int, isFavorite: Bool) -> AnyPublisher<Bool, Error>
     func getLocalData(query: String?) -> AnyPublisher<[LocalGameEntity], Error>
@@ -17,12 +17,12 @@ protocol LocalDataSource {
     func getDetailGame(gameId: Int) -> AnyPublisher<LocalGameEntity, Error>
 }
 
-class LocalDataSourceImpl: LocalDataSource {
+public class LocalDataSourceImpl: LocalDataSource {
     let realm: Realm?
     init(realm: Realm) {
         self.realm = realm
     }
-    func getDetailGame(gameId: Int) -> AnyPublisher<LocalGameEntity, Error> {
+    public func getDetailGame(gameId: Int) -> AnyPublisher<LocalGameEntity, Error> {
         return Future<LocalGameEntity, Error> { completion in
             if let realm = self.realm {
                 let game = realm.objects(LocalGameEntity.self).filter("id= %@", gameId).first
@@ -34,7 +34,7 @@ class LocalDataSourceImpl: LocalDataSource {
             }
         }.eraseToAnyPublisher()
     }
-    func getFavorites() -> AnyPublisher<[LocalGameEntity], Error> {
+    public func getFavorites() -> AnyPublisher<[LocalGameEntity], Error> {
         return Future<[LocalGameEntity], Error> { completion in
             if let realm = self.realm {
                 let games: Results<LocalGameEntity> = {
@@ -47,11 +47,10 @@ class LocalDataSourceImpl: LocalDataSource {
             }
         }.eraseToAnyPublisher()
     }
-    func setFavorite(id: Int, isFavorite: Bool) -> AnyPublisher<Bool, Error> {
+    public func setFavorite(id: Int, isFavorite: Bool) -> AnyPublisher<Bool, Error> {
         return Future<Bool, Error> { completion in
             if let realm = self.realm {
                 let game = realm.objects(LocalGameEntity.self).filter("id = %@", id).first
-                
                 do {
                     try realm.write {
                         game?.isFavorite = isFavorite
@@ -60,14 +59,13 @@ class LocalDataSourceImpl: LocalDataSource {
                 } catch {
                     completion(.failure(DatabaseError.requestFailed))
                 }
-                
             } else {
                 completion(.failure(DatabaseError.invalidInstance))
             }
         }.eraseToAnyPublisher()
     }
 
-    func getLocalData(query: String?) -> AnyPublisher<[LocalGameEntity], Error> {
+    public func getLocalData(query: String?) -> AnyPublisher<[LocalGameEntity], Error> {
         return Future<[LocalGameEntity], Error> { completion in
             if let realm = self.realm {
                 let games: Results<LocalGameEntity> = {
@@ -81,7 +79,7 @@ class LocalDataSourceImpl: LocalDataSource {
         }.eraseToAnyPublisher()
     }
 
-    func setLocalData(games: [GameModel]) -> AnyPublisher<Bool, Error> {
+    public func setLocalData(games: [GameModel]) -> AnyPublisher<Bool, Error> {
         return Future<Bool, Error> { completion in
             if let realm = self.realm {
                 do {

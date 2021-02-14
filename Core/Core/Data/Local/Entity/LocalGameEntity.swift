@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class LocalGameEntity: Object {
+public class LocalGameEntity: Object {
 
     @objc dynamic var id: Int = 0
     @objc dynamic var name: String = ""
@@ -20,8 +20,7 @@ class LocalGameEntity: Object {
     @objc dynamic var isFavorite: Bool = false
     @objc dynamic var genres: String = ""
     @objc dynamic var gameClip: String = ""
-    override static func primaryKey() -> String? {
+    public override static func primaryKey() -> String? {
         return "id"
     }
- 
 }
