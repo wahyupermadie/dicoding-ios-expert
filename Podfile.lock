@@ -1,0 +1,50 @@
+PODS:
+  - Alamofire (5.4.1)
+  - Profile (1.0.1)
+  - Realm (10.5.2):
+    - Realm/Headers (= 10.5.2)
+  - Realm/Headers (10.5.2)
+  - RealmSwift (10.5.2):
+    - Realm (= 10.5.2)
+  - Resolver (1.4.0)
+  - SDWebImage (5.10.4):
+    - SDWebImage/Core (= 5.10.4)
+  - SDWebImage/Core (5.10.4)
+  - SDWebImageSwiftUI (1.5.0):
+    - SDWebImage (~> 5.7)
+  - SwiftLint (0.42.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Profile (~> 1.0.1)
+  - RealmSwift
+  - Resolver
+  - SDWebImageSwiftUI
+  - SwiftLint
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - SwiftLint
+  https://github.com/wahyupermadie/dicoding-ios-expert-module-podspec:
+    - Profile
+  trunk:
+    - Alamofire
+    - Realm
+    - RealmSwift
+    - Resolver
+    - SDWebImage
+    - SDWebImageSwiftUI
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  Profile: dec570cbbcf09e78c8a076452ae21eb7cfb203c6
+  Realm: 2e1bc0d28301006176692da234deff51f867d5ae
+  RealmSwift: a522ad39715e8b4e491af4460059bc32b84f5a9b
+  Resolver: 9371a9c561477b2ff76408114fa3ba7e94d17afe
+  SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
+  SDWebImageSwiftUI: 43687ffe232ddd33fe0659498b7ca9884fdd6b35
+  SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
+
+PODFILE CHECKSUM: 0d7f3aadce924c942247fb9e91da21da6f0c5a32
+
+COCOAPODS: 1.10.1

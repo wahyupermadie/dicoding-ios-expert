@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  App
+
+  Created by Wahyu Permadi on 14/02/21.
+  
+*/
+
+"text_home" = "Home";
+"text_favorite" = "Favorite";
+"text_profile" = "Profile";
