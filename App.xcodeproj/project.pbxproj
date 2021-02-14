@@ -25,9 +25,9 @@
 		D48DC7DF25D919B300D91C0A /* Home.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D48DC7D925D919B300D91C0A /* Home.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D48DC7EA25D91AF200D91C0A /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48DC7E925D91AF200D91C0A /* String+Ext.swift */; };
 		D48DC82025D9355600D91C0A /* RouterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48DC81F25D9355600D91C0A /* RouterManager.swift */; };
-		D4ADDDE725D9806900E036D7 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4ADDDE425D9806900E036D7 /* OpenSans-Bold.ttf */; };
-		D4ADDDE825D9806900E036D7 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4ADDDE525D9806900E036D7 /* OpenSans-Regular.ttf */; };
-		D4ADDDE925D9806900E036D7 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4ADDDE625D9806900E036D7 /* OpenSans-Light.ttf */; };
+		D4ADDE9225D9A4AE00E036D7 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4ADDE8F25D9A4AE00E036D7 /* OpenSans-Regular.ttf */; };
+		D4ADDE9325D9A4AE00E036D7 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4ADDE9025D9A4AE00E036D7 /* OpenSans-Bold.ttf */; };
+		D4ADDE9425D9A4AE00E036D7 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4ADDE9125D9A4AE00E036D7 /* OpenSans-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,9 +91,9 @@
 		D48DC7D925D919B300D91C0A /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48DC7E925D91AF200D91C0A /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		D48DC81F25D9355600D91C0A /* RouterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterManager.swift; sourceTree = "<group>"; };
-		D4ADDDE425D9806900E036D7 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "../../../../../../Downloads/Open_Sans/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
-		D4ADDDE525D9806900E036D7 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../../../../../../Downloads/Open_Sans/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
-		D4ADDDE625D9806900E036D7 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Light.ttf"; path = "../../../../../../Downloads/Open_Sans/OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		D4ADDE8F25D9A4AE00E036D7 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		D4ADDE9025D9A4AE00E036D7 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		D4ADDE9125D9A4AE00E036D7 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		EBF00137783C1DD7A0566E9F /* Pods_App_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -179,7 +179,7 @@
 		D46A1B6225D67E9A0069ABCE /* App */ = {
 			isa = PBXGroup;
 			children = (
-				D4ADDDE325D9804B00E036D7 /* Fonts */,
+				D4ADDE8C25D9A44900E036D7 /* Fonts */,
 				D48DC81D25D9354100D91C0A /* Router */,
 				D48DC81C25D9353D00D91C0A /* DI */,
 				D48DC7A925D9137C00D91C0A /* Utils */,
@@ -266,12 +266,12 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		D4ADDDE325D9804B00E036D7 /* Fonts */ = {
+		D4ADDE8C25D9A44900E036D7 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				D4ADDDE425D9806900E036D7 /* OpenSans-Bold.ttf */,
-				D4ADDDE625D9806900E036D7 /* OpenSans-Light.ttf */,
-				D4ADDDE525D9806900E036D7 /* OpenSans-Regular.ttf */,
+				D4ADDE9025D9A4AE00E036D7 /* OpenSans-Bold.ttf */,
+				D4ADDE9125D9A4AE00E036D7 /* OpenSans-Light.ttf */,
+				D4ADDE8F25D9A4AE00E036D7 /* OpenSans-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -387,11 +387,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4ADDDE925D9806900E036D7 /* OpenSans-Light.ttf in Resources */,
-				D4ADDDE825D9806900E036D7 /* OpenSans-Regular.ttf in Resources */,
+				D4ADDE9425D9A4AE00E036D7 /* OpenSans-Light.ttf in Resources */,
 				D46A1B6B25D67E9C0069ABCE /* Preview Assets.xcassets in Resources */,
 				D48DC7CD25D917AA00D91C0A /* Localizable.strings in Resources */,
-				D4ADDDE725D9806900E036D7 /* OpenSans-Bold.ttf in Resources */,
+				D4ADDE9225D9A4AE00E036D7 /* OpenSans-Regular.ttf in Resources */,
+				D4ADDE9325D9A4AE00E036D7 /* OpenSans-Bold.ttf in Resources */,
 				D46A1B6825D67E9C0069ABCE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
