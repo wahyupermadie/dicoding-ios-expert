@@ -1,0 +1,10 @@
+/* 
+  Localization.strings
+  Home
+
+  Created by Wahyu Permadi on 15/02/21.
+  
+*/
+
+"empty_game" = "No Games Found";
+"view_title" = "Games Catalog";

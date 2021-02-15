@@ -8,11 +8,12 @@
 import Foundation
 import SwiftUI
 import Core
+import Resolver
 
 public extension Router {
     func registerFavoriteRouter() {
         self.routerToFavorite = {
-            AnyView(FavoriteView())
+            AnyView(FavoriteView(viewModel: Resolver.resolve()))
         }
     }
 }

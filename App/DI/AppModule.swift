@@ -14,5 +14,6 @@ extension Resolver: ResolverRegistering {
     public static func registerAllServices() {
         self.registerCoreModule()
         self.registerHomeModule()
+        self.registerFavoriteModule()
     }
 }

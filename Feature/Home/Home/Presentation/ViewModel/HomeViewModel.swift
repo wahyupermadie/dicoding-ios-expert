@@ -14,7 +14,7 @@ class HomeViewModel: ObservableObject {
     @Published var loadingState: Bool = false
     @Published var errorMessage: String = ""
     @Published var games: [GameModel] = []
-    let homeUseCase: HomeUseCase
+    private let homeUseCase: HomeUseCase
     init(homeUseCase: HomeUseCase) {
         self.homeUseCase = homeUseCase
     }

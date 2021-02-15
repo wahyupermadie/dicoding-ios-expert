@@ -6,15 +6,50 @@
 //
 
 import SwiftUI
+import Core
+import Resolver
+
 struct FavoriteView: View {
-    init() {}
+    @ObservedObject var viewModel: FavoriteViewModel
+    init(viewModel: FavoriteViewModel) {
+        self.viewModel = viewModel
+    }
     var body: some View {
-        Text("Hello, Favorite!")
+        NavigationView {
+            ScrollView(.vertical, showsIndicators: false) {
+                if self.viewModel.loadingState {
+                    LoadingView()
+                } else {
+                    if self.viewModel.games.isEmpty {
+                        VStack {
+                            Spacer()
+                            Image("empty_state")
+                                .resizable()
+                                .frame(width: UIScreen.main.bounds.width - 80)
+                                .scaledToFit()
+                                .clipped()
+                            Text("empty_game".localized(identifier: .bundleId))
+                                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                                .font(.system(size: 12))
+                                .foregroundColor(.gray)
+                                .multilineTextAlignment(.center)
+                            Spacer()
+                        }
+                    } else {
+                        ForEach(self.viewModel.games, id: \.id) { game in
+                            GameView(game: game)
+                        }
+                    }
+                }
+            }.onAppear(perform: {
+                self.viewModel.getFavorite()
+            }).navigationTitle(Text("view_title".localized(identifier: .bundleId)))
+        }
     }
 }
 
 struct FavoriteView_Previews: PreviewProvider {
     static var previews: some View {
-        FavoriteView()
+        FavoriteView(viewModel: Resolver.resolve())
     }
 }

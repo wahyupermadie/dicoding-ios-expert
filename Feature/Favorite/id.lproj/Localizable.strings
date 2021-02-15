@@ -1,0 +1,10 @@
+/* 
+  Localization.strings
+  Favorite
+
+  Created by Wahyu Permadi on 16/02/21.
+  
+*/
+
+"empty_game" = "Sepertinya kamu belum menambahkan Gim favorit nih";
+"view_title" = "Katalog Gim";

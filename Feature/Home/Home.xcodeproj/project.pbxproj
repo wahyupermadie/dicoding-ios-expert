@@ -12,6 +12,8 @@
 		D45026BD25DA7C0400F7EF11 /* HomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45026BC25DA7C0400F7EF11 /* HomeModule.swift */; };
 		D45026FE25DA958300F7EF11 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45026FD25DA958300F7EF11 /* HomeViewModel.swift */; };
 		D450271F25DA9CD200F7EF11 /* Router+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450271E25DA9CD200F7EF11 /* Router+Ext.swift */; };
+		D450272425DAA14000F7EF11 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D450272625DAA14000F7EF11 /* Localizable.strings */; };
+		D450272F25DAA1E800F7EF11 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450272E25DAA1E800F7EF11 /* String+Ext.swift */; };
 		D46A1BD425D680390069ABCE /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46A1BCA25D680390069ABCE /* Home.framework */; };
 		D46A1BD925D680390069ABCE /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46A1BD825D680390069ABCE /* HomeTests.swift */; };
 		D46A1BDB25D680390069ABCE /* Home.h in Headers */ = {isa = PBXBuildFile; fileRef = D46A1BCD25D680390069ABCE /* Home.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -54,6 +56,9 @@
 		D45026BC25DA7C0400F7EF11 /* HomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModule.swift; sourceTree = "<group>"; };
 		D45026FD25DA958300F7EF11 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D450271E25DA9CD200F7EF11 /* Router+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+Ext.swift"; sourceTree = "<group>"; };
+		D450272525DAA14000F7EF11 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D450272825DAA16300F7EF11 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D450272E25DAA1E800F7EF11 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		D46A1BCA25D680390069ABCE /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D46A1BCD25D680390069ABCE /* Home.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
 		D46A1BCE25D680390069ABCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -144,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				D450271E25DA9CD200F7EF11 /* Router+Ext.swift */,
+				D450272E25DAA1E800F7EF11 /* String+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -172,13 +178,13 @@
 			isa = PBXGroup;
 			children = (
 				D450270125DA97FA00F7EF11 /* Utils */,
-				D45026FC25DA957800F7EF11 /* ViewModel */,
 				D45026B725DA77A400F7EF11 /* UseCase */,
 				D45026B625DA779500F7EF11 /* DI */,
 				D48DC7F525D92B8C00D91C0A /* Data */,
 				D48B1CB525D8F9240013DDBD /* Presentation */,
 				D46A1BCD25D680390069ABCE /* Home.h */,
 				D46A1BCE25D680390069ABCE /* Info.plist */,
+				D450272625DAA14000F7EF11 /* Localizable.strings */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -195,6 +201,7 @@
 		D48B1CB525D8F9240013DDBD /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				D45026FC25DA957800F7EF11 /* ViewModel */,
 				D48B1CB625D8F9400013DDBD /* HomeView.swift */,
 			);
 			path = Presentation;
@@ -302,6 +309,7 @@
 			knownRegions = (
 				en,
 				Base,
+				id,
 			);
 			mainGroup = D46A1BC025D680390069ABCE;
 			productRefGroup = D46A1BCB25D680390069ABCE /* Products */;
@@ -319,6 +327,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D450272425DAA14000F7EF11 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +376,7 @@
 				D4ADDEA925D9A7E700E036D7 /* HomeRepository.swift in Sources */,
 				D45026BD25DA7C0400F7EF11 /* HomeModule.swift in Sources */,
 				D45026B925DA77C100F7EF11 /* HomeUseCase.swift in Sources */,
+				D450272F25DAA1E800F7EF11 /* String+Ext.swift in Sources */,
 				D48B1CB725D8F9400013DDBD /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,11 +399,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		D450272625DAA14000F7EF11 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D450272525DAA14000F7EF11 /* en */,
+				D450272825DAA16300F7EF11 /* id */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		D46A1BDC25D680390069ABCE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -458,6 +481,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

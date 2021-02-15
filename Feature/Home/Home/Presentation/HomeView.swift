@@ -28,11 +28,12 @@ struct HomeView: View {
                                 .frame(width: UIScreen.main.bounds.width - 80)
                                 .scaledToFit()
                                 .clipped()
-                            Text("Sepertinya tidak ada Game yang ditemukan")
+                            Text("empty_game".localized(identifier: .bundleId))
                                 .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                                 .font(.system(size: 12))
                                 .foregroundColor(.gray)
                                 .multilineTextAlignment(.center)
+                            Spacer()
                         }
                     } else {
                         ForEach(self.viewModel.games, id: \.id) { game in
@@ -42,7 +43,7 @@ struct HomeView: View {
                 }
             }.onAppear(perform: {
                 self.viewModel.getGames(name: nil)
-            }).navigationTitle(Text("Games Catalogue"))
+            }).navigationTitle("view_title".localized(identifier: .bundleId))
         }
     }
 }

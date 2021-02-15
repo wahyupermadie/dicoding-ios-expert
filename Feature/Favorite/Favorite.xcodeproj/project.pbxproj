@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		BC569A06D403B63727752E24 /* Pods_Favorite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E18F7BD4D2668D983B1FC05 /* Pods_Favorite.framework */; };
+		D450273325DAC38F00F7EF11 /* FavoriteModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450273225DAC38F00F7EF11 /* FavoriteModule.swift */; };
+		D450273825DAC4C200F7EF11 /* FavoriteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450273725DAC4C200F7EF11 /* FavoriteUseCase.swift */; };
+		D450273C25DAC6BF00F7EF11 /* FavoriteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450273B25DAC6BF00F7EF11 /* FavoriteRepository.swift */; };
+		D450274025DAC89500F7EF11 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450273F25DAC89500F7EF11 /* FavoriteViewModel.swift */; };
+		D450274325DAD1FB00F7EF11 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450274225DAD1FB00F7EF11 /* String+Ext.swift */; };
+		D450275F25DAD7FF00F7EF11 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D450276125DAD7FF00F7EF11 /* Localizable.strings */; };
 		D46A1BFA25D680570069ABCE /* Favorite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46A1BF025D680560069ABCE /* Favorite.framework */; };
 		D46A1BFF25D680570069ABCE /* FavoriteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46A1BFE25D680570069ABCE /* FavoriteTests.swift */; };
 		D46A1C0125D680570069ABCE /* Favorite.h in Headers */ = {isa = PBXBuildFile; fileRef = D46A1BF325D680560069ABCE /* Favorite.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -44,6 +50,13 @@
 /* Begin PBXFileReference section */
 		2AF9C65A81618E3E5BBA2BEE /* Pods-Favorite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Favorite.release.xcconfig"; path = "Target Support Files/Pods-Favorite/Pods-Favorite.release.xcconfig"; sourceTree = "<group>"; };
 		9E18F7BD4D2668D983B1FC05 /* Pods_Favorite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Favorite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D450273225DAC38F00F7EF11 /* FavoriteModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteModule.swift; sourceTree = "<group>"; };
+		D450273725DAC4C200F7EF11 /* FavoriteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteUseCase.swift; sourceTree = "<group>"; };
+		D450273B25DAC6BF00F7EF11 /* FavoriteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRepository.swift; sourceTree = "<group>"; };
+		D450273F25DAC89500F7EF11 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
+		D450274225DAD1FB00F7EF11 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		D450276025DAD7FF00F7EF11 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D450276325DAD80300F7EF11 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D46A1BF025D680560069ABCE /* Favorite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Favorite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D46A1BF325D680560069ABCE /* Favorite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Favorite.h; sourceTree = "<group>"; };
 		D46A1BF425D680560069ABCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,9 +99,42 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D450273125DAC38300F7EF11 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				D450273225DAC38F00F7EF11 /* FavoriteModule.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		D450273625DAC4B200F7EF11 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				D450273725DAC4C200F7EF11 /* FavoriteUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		D450273A25DAC67700F7EF11 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				D450273B25DAC6BF00F7EF11 /* FavoriteRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		D450273E25DAC87F00F7EF11 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D450273F25DAC89500F7EF11 /* FavoriteViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		D46A1BE625D680560069ABCE = {
 			isa = PBXGroup;
 			children = (
+				D450276125DAD7FF00F7EF11 /* Localizable.strings */,
 				D46A1BF225D680560069ABCE /* Favorite */,
 				D46A1BFD25D680570069ABCE /* FavoriteTests */,
 				D46A1BF125D680560069ABCE /* Products */,
@@ -109,6 +155,8 @@
 		D46A1BF225D680560069ABCE /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
+				D450273625DAC4B200F7EF11 /* UseCase */,
+				D450273125DAC38300F7EF11 /* DI */,
 				D48DC85525D93B0B00D91C0A /* Data */,
 				D48DC80F25D933B900D91C0A /* Utils */,
 				D48B1CB425D8F9150013DDBD /* Presentation */,
@@ -130,6 +178,7 @@
 		D48B1CB425D8F9150013DDBD /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				D450273E25DAC87F00F7EF11 /* ViewModel */,
 				D48B1CBC25D8F95C0013DDBD /* FavoriteView.swift */,
 			);
 			path = Presentation;
@@ -147,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				D48DC81125D933DE00D91C0A /* Router+Ext.swift */,
+				D450274225DAD1FB00F7EF11 /* String+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -154,6 +204,7 @@
 		D48DC85525D93B0B00D91C0A /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				D450273A25DAC67700F7EF11 /* Repository */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -245,6 +296,7 @@
 			knownRegions = (
 				en,
 				Base,
+				id,
 			);
 			mainGroup = D46A1BE625D680560069ABCE;
 			productRefGroup = D46A1BF125D680560069ABCE /* Products */;
@@ -262,6 +314,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D450275F25DAD7FF00F7EF11 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,8 +357,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D450274025DAC89500F7EF11 /* FavoriteViewModel.swift in Sources */,
+				D450274325DAD1FB00F7EF11 /* String+Ext.swift in Sources */,
 				D48DC81225D933DE00D91C0A /* Router+Ext.swift in Sources */,
+				D450273825DAC4C200F7EF11 /* FavoriteUseCase.swift in Sources */,
+				D450273C25DAC6BF00F7EF11 /* FavoriteRepository.swift in Sources */,
 				D48B1CBD25D8F95C0013DDBD /* FavoriteView.swift in Sources */,
+				D450273325DAC38F00F7EF11 /* FavoriteModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +384,18 @@
 			targetProxy = D46A1BFB25D680570069ABCE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D450276125DAD7FF00F7EF11 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D450276025DAD7FF00F7EF11 /* en */,
+				D450276325DAD80300F7EF11 /* id */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D46A1C0225D680570069ABCE /* Debug */ = {
