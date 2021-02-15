@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		494D7E51B57FDBB59FAA0C16 /* Pods_Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4535FF70B2A2CB206E6D7EA /* Pods_Home.framework */; };
+		D45026B925DA77C100F7EF11 /* HomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45026B825DA77C100F7EF11 /* HomeUseCase.swift */; };
+		D45026BD25DA7C0400F7EF11 /* HomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45026BC25DA7C0400F7EF11 /* HomeModule.swift */; };
+		D45026FE25DA958300F7EF11 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45026FD25DA958300F7EF11 /* HomeViewModel.swift */; };
+		D450271F25DA9CD200F7EF11 /* Router+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450271E25DA9CD200F7EF11 /* Router+Ext.swift */; };
 		D46A1BD425D680390069ABCE /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46A1BCA25D680390069ABCE /* Home.framework */; };
 		D46A1BD925D680390069ABCE /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46A1BD825D680390069ABCE /* HomeTests.swift */; };
 		D46A1BDB25D680390069ABCE /* Home.h in Headers */ = {isa = PBXBuildFile; fileRef = D46A1BCD25D680390069ABCE /* Home.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -46,6 +50,10 @@
 		4CAC535A9352C83936CBD99F /* Pods-Home.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Home.release.xcconfig"; path = "Target Support Files/Pods-Home/Pods-Home.release.xcconfig"; sourceTree = "<group>"; };
 		80F3178142E132D1C77E108B /* Pods-Home.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Home.debug.xcconfig"; path = "Target Support Files/Pods-Home/Pods-Home.debug.xcconfig"; sourceTree = "<group>"; };
 		A4535FF70B2A2CB206E6D7EA /* Pods_Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D45026B825DA77C100F7EF11 /* HomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCase.swift; sourceTree = "<group>"; };
+		D45026BC25DA7C0400F7EF11 /* HomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModule.swift; sourceTree = "<group>"; };
+		D45026FD25DA958300F7EF11 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		D450271E25DA9CD200F7EF11 /* Router+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+Ext.swift"; sourceTree = "<group>"; };
 		D46A1BCA25D680390069ABCE /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D46A1BCD25D680390069ABCE /* Home.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
 		D46A1BCE25D680390069ABCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,6 +108,46 @@
 			path = ../../Pods;
 			sourceTree = "<group>";
 		};
+		D45026B625DA779500F7EF11 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				D45026BC25DA7C0400F7EF11 /* HomeModule.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		D45026B725DA77A400F7EF11 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				D45026B825DA77C100F7EF11 /* HomeUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		D45026FC25DA957800F7EF11 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D45026FD25DA958300F7EF11 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D450270125DA97FA00F7EF11 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D450270825DA993700F7EF11 /* Extension */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D450270825DA993700F7EF11 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D450271E25DA9CD200F7EF11 /* Router+Ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		D46A1BC025D680390069ABCE = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +171,10 @@
 		D46A1BCC25D680390069ABCE /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D450270125DA97FA00F7EF11 /* Utils */,
+				D45026FC25DA957800F7EF11 /* ViewModel */,
+				D45026B725DA77A400F7EF11 /* UseCase */,
+				D45026B625DA779500F7EF11 /* DI */,
 				D48DC7F525D92B8C00D91C0A /* Data */,
 				D48B1CB525D8F9240013DDBD /* Presentation */,
 				D46A1BCD25D680390069ABCE /* Home.h */,
@@ -309,8 +361,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D450271F25DA9CD200F7EF11 /* Router+Ext.swift in Sources */,
 				D4ADDDFE25D986D500E036D7 /* HomeDataSource.swift in Sources */,
+				D45026FE25DA958300F7EF11 /* HomeViewModel.swift in Sources */,
 				D4ADDEA925D9A7E700E036D7 /* HomeRepository.swift in Sources */,
+				D45026BD25DA7C0400F7EF11 /* HomeModule.swift in Sources */,
+				D45026B925DA77C100F7EF11 /* HomeUseCase.swift in Sources */,
 				D48B1CB725D8F9400013DDBD /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

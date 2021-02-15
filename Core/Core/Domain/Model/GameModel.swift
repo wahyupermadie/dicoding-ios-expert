@@ -6,7 +6,7 @@
 //
 
 public struct GameModel {
-    var id: Int
+    public var id: Int
     var name: String
     var released: Date? = nil
     var backgroundImage: String = ""

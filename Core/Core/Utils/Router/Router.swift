@@ -15,7 +15,7 @@ public class Router {
     public var routerToHome: (() -> AnyView)?
     public func navigateToHome() -> AnyView? {
         return self.routerToHome?()
-    }    
+    }
     public var routerToFavorite: (() -> AnyView)?
     public func navigateToFavorite() -> AnyView? {
         return self.routerToFavorite?()

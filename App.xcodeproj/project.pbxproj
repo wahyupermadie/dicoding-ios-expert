@@ -10,6 +10,7 @@
 		1207BA1CD172A5554A911828 /* Pods_App_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF00137783C1DD7A0566E9F /* Pods_App_AppUITests.framework */; };
 		67BC8EFA4679226AA0CA2AC3 /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091B5B5FD3657C03F585C83E /* Pods_App.framework */; };
 		7E4E53D0BA1B540DD8208884 /* Pods_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B2131CACE0D9ECA3CB1A7F8 /* Pods_AppTests.framework */; };
+		D45026AC25DA73DD00F7EF11 /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45026AB25DA73DD00F7EF11 /* AppModule.swift */; };
 		D46A1B6425D67E9A0069ABCE /* AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46A1B6325D67E9A0069ABCE /* AppApp.swift */; };
 		D46A1B6825D67E9C0069ABCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D46A1B6725D67E9C0069ABCE /* Assets.xcassets */; };
 		D46A1B6B25D67E9C0069ABCE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D46A1B6A25D67E9C0069ABCE /* Preview Assets.xcassets */; };
@@ -72,6 +73,7 @@
 		A02E06BD2E79393BCC10A723 /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
 		B17B92BFC2D59C12914AD23C /* Pods-AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppTests.release.xcconfig"; path = "Target Support Files/Pods-AppTests/Pods-AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		C3821A99C546BB0199C5B9B9 /* Pods-App-AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-AppUITests.release.xcconfig"; path = "Target Support Files/Pods-App-AppUITests/Pods-App-AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D45026AB25DA73DD00F7EF11 /* AppModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModule.swift; sourceTree = "<group>"; };
 		D46A1B6025D67E9A0069ABCE /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D46A1B6325D67E9A0069ABCE /* AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppApp.swift; sourceTree = "<group>"; };
 		D46A1B6725D67E9C0069ABCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -154,6 +156,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D45026A825DA73B800F7EF11 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				D45026AB25DA73DD00F7EF11 /* AppModule.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 		D46A1B5725D67E9A0069ABCE = {
 			isa = PBXGroup;
 			children = (
@@ -179,9 +189,9 @@
 		D46A1B6225D67E9A0069ABCE /* App */ = {
 			isa = PBXGroup;
 			children = (
+				D45026A825DA73B800F7EF11 /* DI */,
 				D4ADDE8C25D9A44900E036D7 /* Fonts */,
 				D48DC81D25D9354100D91C0A /* Router */,
-				D48DC81C25D9353D00D91C0A /* DI */,
 				D48DC7A925D9137C00D91C0A /* Utils */,
 				D48B1CC525D8FA5E0013DDBD /* Supporting Files */,
 				D48B1CC425D8FA280013DDBD /* Presentation */,
@@ -249,13 +259,6 @@
 				D48DC7E925D91AF200D91C0A /* String+Ext.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		D48DC81C25D9353D00D91C0A /* DI */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DI;
 			sourceTree = "<group>";
 		};
 		D48DC81D25D9354100D91C0A /* Router */ = {
@@ -538,6 +541,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D48DC7EA25D91AF200D91C0A /* String+Ext.swift in Sources */,
+				D45026AC25DA73DD00F7EF11 /* AppModule.swift in Sources */,
 				D46A1B6425D67E9A0069ABCE /* AppApp.swift in Sources */,
 				D48DC82025D9355600D91C0A /* RouterManager.swift in Sources */,
 				D48DC7B725D9147300D91C0A /* Constants.swift in Sources */,

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3F46882568F3347C636053E1 /* Pods_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D2080C533E214C228B195A /* Pods_Core.framework */; };
+		D45026B325DA74B700F7EF11 /* CoreModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45026B225DA74B700F7EF11 /* CoreModule.swift */; };
+		D45026C125DA7D7200F7EF11 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45026C025DA7D7200F7EF11 /* LoadingView.swift */; };
+		D45026CD25DA88DA00F7EF11 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45026CC25DA88DA00F7EF11 /* GameView.swift */; };
+		D45026D125DA892300F7EF11 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45026D025DA892300F7EF11 /* ImageView.swift */; };
 		D46A1BA525D67EAB0069ABCE /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46A1B9B25D67EAB0069ABCE /* Core.framework */; };
 		D46A1BAA25D67EAB0069ABCE /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46A1BA925D67EAB0069ABCE /* CoreTests.swift */; };
 		D46A1BAC25D67EAB0069ABCE /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = D46A1B9E25D67EAB0069ABCE /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -38,6 +42,10 @@
 
 /* Begin PBXFileReference section */
 		B313C0D65A036ABDCFFFB808 /* Pods-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.debug.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.debug.xcconfig"; sourceTree = "<group>"; };
+		D45026B225DA74B700F7EF11 /* CoreModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreModule.swift; sourceTree = "<group>"; };
+		D45026C025DA7D7200F7EF11 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		D45026CC25DA88DA00F7EF11 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		D45026D025DA892300F7EF11 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		D46A1B9B25D67EAB0069ABCE /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D46A1B9E25D67EAB0069ABCE /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		D46A1B9F25D67EAB0069ABCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,6 +107,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D45026AF25DA746A00F7EF11 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				D45026B225DA74B700F7EF11 /* CoreModule.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		D45026BF25DA7D6000F7EF11 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				D45026C025DA7D7200F7EF11 /* LoadingView.swift */,
+				D45026CC25DA88DA00F7EF11 /* GameView.swift */,
+				D45026D025DA892300F7EF11 /* ImageView.swift */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
 		D46A1B9125D67EAB0069ABCE = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +148,7 @@
 		D46A1B9D25D67EAB0069ABCE /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D45026AF25DA746A00F7EF11 /* DI */,
 				D48DC82D25D9384A00D91C0A /* Domain */,
 				D48DC82325D9375200D91C0A /* Data */,
 				D48DC7A325D9125700D91C0A /* Utils */,
@@ -143,6 +170,7 @@
 		D48DC7A325D9125700D91C0A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D45026BF25DA7D6000F7EF11 /* Widget */,
 				D48DC80825D9317300D91C0A /* Router */,
 				D48DC7A425D9128D00D91C0A /* Extension */,
 				D48DC7ED25D9206300D91C0A /* ErrorState.swift */,
@@ -365,18 +393,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D45026B325DA74B700F7EF11 /* CoreModule.swift in Sources */,
 				D48DC80A25D9317F00D91C0A /* Router.swift in Sources */,
 				D48DC82825D937D900D91C0A /* LocalGameEntity.swift in Sources */,
+				D45026D125DA892300F7EF11 /* ImageView.swift in Sources */,
 				D48DC7EE25D9206300D91C0A /* ErrorState.swift in Sources */,
 				D48DC7C525D9170200D91C0A /* String+Ext.swift in Sources */,
 				D48DC84C25D93A5200D91C0A /* LocalDataSource.swift in Sources */,
 				D48DC85225D93AB200D91C0A /* Object+Mapper.swift in Sources */,
 				D48DC84725D9398300D91C0A /* Date+Ext.swift in Sources */,
+				D45026C125DA7D7200F7EF11 /* LoadingView.swift in Sources */,
 				D4ADDDF425D981E700E036D7 /* Game.swift in Sources */,
 				D48DC7F225D9297B00D91C0A /* Constants.swift in Sources */,
 				D4ADDDF525D981E700E036D7 /* GameResponse.swift in Sources */,
 				D48DC83025D9389C00D91C0A /* GameModel.swift in Sources */,
 				D4ADDDF225D981E700E036D7 /* Genre.swift in Sources */,
+				D45026CD25DA88DA00F7EF11 /* GameView.swift in Sources */,
 				D4ADDDF325D981E700E036D7 /* Clip.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

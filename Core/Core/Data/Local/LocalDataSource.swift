@@ -16,13 +16,12 @@ public protocol LocalDataSource {
     func setLocalData(games: [GameModel]) -> AnyPublisher<Bool, Error>
     func getDetailGame(gameId: Int) -> AnyPublisher<LocalGameEntity, Error>
 }
-
-public class LocalDataSourceImpl: LocalDataSource {
+internal class LocalDataSourceImpl: LocalDataSource {
     let realm: Realm?
-    init(realm: Realm) {
+    init(realm: Realm?) {
         self.realm = realm
     }
-    public func getDetailGame(gameId: Int) -> AnyPublisher<LocalGameEntity, Error> {
+    func getDetailGame(gameId: Int) -> AnyPublisher<LocalGameEntity, Error> {
         return Future<LocalGameEntity, Error> { completion in
             if let realm = self.realm {
                 let game = realm.objects(LocalGameEntity.self).filter("id= %@", gameId).first
@@ -34,7 +33,7 @@ public class LocalDataSourceImpl: LocalDataSource {
             }
         }.eraseToAnyPublisher()
     }
-    public func getFavorites() -> AnyPublisher<[LocalGameEntity], Error> {
+    func getFavorites() -> AnyPublisher<[LocalGameEntity], Error> {
         return Future<[LocalGameEntity], Error> { completion in
             if let realm = self.realm {
                 let games: Results<LocalGameEntity> = {
@@ -47,7 +46,7 @@ public class LocalDataSourceImpl: LocalDataSource {
             }
         }.eraseToAnyPublisher()
     }
-    public func setFavorite(id: Int, isFavorite: Bool) -> AnyPublisher<Bool, Error> {
+    func setFavorite(id: Int, isFavorite: Bool) -> AnyPublisher<Bool, Error> {
         return Future<Bool, Error> { completion in
             if let realm = self.realm {
                 let game = realm.objects(LocalGameEntity.self).filter("id = %@", id).first
@@ -64,8 +63,7 @@ public class LocalDataSourceImpl: LocalDataSource {
             }
         }.eraseToAnyPublisher()
     }
-
-    public func getLocalData(query: String?) -> AnyPublisher<[LocalGameEntity], Error> {
+    func getLocalData(query: String?) -> AnyPublisher<[LocalGameEntity], Error> {
         return Future<[LocalGameEntity], Error> { completion in
             if let realm = self.realm {
                 let games: Results<LocalGameEntity> = {
@@ -78,8 +76,7 @@ public class LocalDataSourceImpl: LocalDataSource {
             }
         }.eraseToAnyPublisher()
     }
-
-    public func setLocalData(games: [GameModel]) -> AnyPublisher<Bool, Error> {
+    func setLocalData(games: [GameModel]) -> AnyPublisher<Bool, Error> {
         return Future<Bool, Error> { completion in
             if let realm = self.realm {
                 do {

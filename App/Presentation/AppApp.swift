@@ -9,7 +9,7 @@ import SwiftUI
 import Profile
 import Core
 import Favorite
-import Home
+import Resolver
 
 @main
 struct AppApp: App {
@@ -20,7 +20,7 @@ struct AppApp: App {
     var body: some Scene {
         WindowGroup {
             TabView {
-                HomeView()
+                Router.router.navigateToHome()
                     .tabItem {
                         imgHome
                         Text("text_home".localized(identifier: .bundleId))

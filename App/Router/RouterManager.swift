@@ -11,5 +11,6 @@ import Core
 public extension Router {
     func registerRouters() {
         self.registerFavoriteRouter()
+        self.registerHomeRouter()
     }
 }
