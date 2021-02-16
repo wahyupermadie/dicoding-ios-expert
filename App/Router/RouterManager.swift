@@ -7,10 +7,12 @@
 
 import Foundation
 import Core
+import Detail
 
 public extension Router {
     func registerRouters() {
         self.registerFavoriteRouter()
         self.registerHomeRouter()
+        self.registerDetailRouter()
     }
 }

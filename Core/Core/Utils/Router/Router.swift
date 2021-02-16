@@ -20,4 +20,8 @@ public class Router {
     public func navigateToFavorite() -> AnyView? {
         return self.routerToFavorite?()
     }
+    public var routerToGameDetail: ((_ gameId: Int) -> AnyView)?
+    public func navigateToGameDetail(_ gameId: Int) -> AnyView? {
+        return self.routerToGameDetail?(gameId)
+    }
 }

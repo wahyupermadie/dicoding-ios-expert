@@ -15,5 +15,6 @@ extension Resolver: ResolverRegistering {
         self.registerCoreModule()
         self.registerHomeModule()
         self.registerFavoriteModule()
+        self.registerDetailModule()
     }
 }

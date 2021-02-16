@@ -14,7 +14,7 @@ pod 'Resolver'
 pod 'SwiftLint'
 
 target 'App' do
-  pod 'Profile','~> 1.0.1'
+  pod 'Profile','1.0.3'
   target 'AppTests' do
     inherit! :search_paths
     # Pods for testing
@@ -23,6 +23,11 @@ target 'App' do
   target 'AppUITests' do
     # Pods for testing
   end
+end
+
+target 'Detail' do
+project './Feature/Detail/Detail'
+
 end
 
 target 'Core' do

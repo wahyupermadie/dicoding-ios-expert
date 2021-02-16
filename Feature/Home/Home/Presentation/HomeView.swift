@@ -23,11 +23,6 @@ struct HomeView: View {
                     if self.viewModel.games.isEmpty {
                         VStack {
                             Spacer()
-                            Image("empty_state")
-                                .resizable()
-                                .frame(width: UIScreen.main.bounds.width - 80)
-                                .scaledToFit()
-                                .clipped()
                             Text("empty_game".localized(identifier: .bundleId))
                                 .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                                 .font(.system(size: 12))
@@ -37,7 +32,10 @@ struct HomeView: View {
                         }
                     } else {
                         ForEach(self.viewModel.games, id: \.id) { game in
-                            GameView(game: game)
+                            NavigationLink(
+                                destination: Router.router.navigateToGameDetail(game.id)) {
+                                GameView(game: game)
+                            }
                         }
                     }
                 }

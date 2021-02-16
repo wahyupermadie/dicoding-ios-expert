@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (5.4.1)
-  - Profile (1.0.1)
+  - Profile (1.0.3)
   - Realm (10.5.2):
     - Realm/Headers (= 10.5.2)
   - Realm/Headers (10.5.2)
@@ -16,7 +16,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - Profile (~> 1.0.1)
+  - Profile (= 1.0.3)
   - RealmSwift
   - Resolver
   - SDWebImageSwiftUI
@@ -37,7 +37,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
-  Profile: dec570cbbcf09e78c8a076452ae21eb7cfb203c6
+  Profile: 48f50f99bc7d96e44ac7429d2c828b0f0a89de0b
   Realm: 2e1bc0d28301006176692da234deff51f867d5ae
   RealmSwift: a522ad39715e8b4e491af4460059bc32b84f5a9b
   Resolver: 9371a9c561477b2ff76408114fa3ba7e94d17afe
@@ -45,6 +45,6 @@ SPEC CHECKSUMS:
   SDWebImageSwiftUI: 43687ffe232ddd33fe0659498b7ca9884fdd6b35
   SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
 
-PODFILE CHECKSUM: 0d7f3aadce924c942247fb9e91da21da6f0c5a32
+PODFILE CHECKSUM: 4f3d407045ee3130adb7c1764e39c62def93f04f
 
 COCOAPODS: 1.10.1

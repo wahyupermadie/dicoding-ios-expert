@@ -16,4 +16,7 @@
    <FileRef
       location = "group:Feature/Home/Home.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Feature/Detail/Detail.xcodeproj">
+   </FileRef>
 </Workspace>

@@ -30,10 +30,10 @@ struct AppApp: App {
                         imgFavorite
                         Text("text_favorite".localized(identifier: .bundleId))
                     }
-                Text("Profile")
+                ProfileView()
                     .tabItem {
-                        imgProfile
-                        Text("text_profile".localized(identifier: .bundleId))
+                        imgFavorite
+                        Text("text_profil".localized(identifier: .bundleId))
                     }
             }
         }

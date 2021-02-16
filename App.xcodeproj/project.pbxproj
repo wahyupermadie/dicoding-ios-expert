@@ -29,6 +29,8 @@
 		D4ADDE9225D9A4AE00E036D7 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4ADDE8F25D9A4AE00E036D7 /* OpenSans-Regular.ttf */; };
 		D4ADDE9325D9A4AE00E036D7 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4ADDE9025D9A4AE00E036D7 /* OpenSans-Bold.ttf */; };
 		D4ADDE9425D9A4AE00E036D7 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4ADDE9125D9A4AE00E036D7 /* OpenSans-Light.ttf */; };
+		D4C2D82F25DB6C6C00A2FC7A /* Detail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C2D82E25DB6C6C00A2FC7A /* Detail.framework */; };
+		D4C2D83025DB6C6C00A2FC7A /* Detail.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4C2D82E25DB6C6C00A2FC7A /* Detail.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,7 @@
 				D48DC7DD25D919B300D91C0A /* Favorite.framework in Embed Frameworks */,
 				D48DC7DB25D919B300D91C0A /* Core.framework in Embed Frameworks */,
 				D48DC7DF25D919B300D91C0A /* Home.framework in Embed Frameworks */,
+				D4C2D83025DB6C6C00A2FC7A /* Detail.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +99,8 @@
 		D4ADDE8F25D9A4AE00E036D7 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		D4ADDE9025D9A4AE00E036D7 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		D4ADDE9125D9A4AE00E036D7 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		D4C2D82E25DB6C6C00A2FC7A /* Detail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Detail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4C2D9CD25DC349700A2FC7A /* Profile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Profile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF00137783C1DD7A0566E9F /* Pods_App_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -107,6 +112,7 @@
 				D48DC7DC25D919B300D91C0A /* Favorite.framework in Frameworks */,
 				67BC8EFA4679226AA0CA2AC3 /* Pods_App.framework in Frameworks */,
 				D48DC7DA25D919B300D91C0A /* Core.framework in Frameworks */,
+				D4C2D82F25DB6C6C00A2FC7A /* Detail.framework in Frameworks */,
 				D48DC7DE25D919B300D91C0A /* Home.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,6 +139,8 @@
 		651B69A18CC2DD1AAA70AA77 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D4C2D9CD25DC349700A2FC7A /* Profile.framework */,
+				D4C2D82E25DB6C6C00A2FC7A /* Detail.framework */,
 				D48DC7D725D919B300D91C0A /* Core.framework */,
 				D48DC7D825D919B300D91C0A /* Favorite.framework */,
 				D48DC7D925D919B300D91C0A /* Home.framework */,
