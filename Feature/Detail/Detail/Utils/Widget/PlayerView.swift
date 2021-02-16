@@ -44,8 +44,10 @@ class PlayerView: UIView, UIGestureRecognizerDelegate {
     }
     @objc func tapHandler(_ sender: UIGestureRecognizerDelegate) {
         if isPlay {
+            self.isPlay = false
             player.pause()
         } else {
+            self.isPlay = true
             player.play()
         }
     }

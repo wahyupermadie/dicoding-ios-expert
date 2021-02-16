@@ -134,7 +134,6 @@
 		D46A1BE625D680560069ABCE = {
 			isa = PBXGroup;
 			children = (
-				D450276125DAD7FF00F7EF11 /* Localizable.strings */,
 				D46A1BF225D680560069ABCE /* Favorite */,
 				D46A1BFD25D680570069ABCE /* FavoriteTests */,
 				D46A1BF125D680560069ABCE /* Products */,
@@ -155,6 +154,7 @@
 		D46A1BF225D680560069ABCE /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
+				D450276125DAD7FF00F7EF11 /* Localizable.strings */,
 				D450273625DAC4B200F7EF11 /* UseCase */,
 				D450273125DAC38300F7EF11 /* DI */,
 				D48DC85525D93B0B00D91C0A /* Data */,
